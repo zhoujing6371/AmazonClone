@@ -1,0 +1,37 @@
+<section id="order">
+    <div class="container p-3 p-md-5">
+      <app-message></app-message>
+      <div *ngIf="!order" class="m-auto">
+        <h1 class="text-center display-3 mt-5">
+          <i class="fa fa-spinner fa-spin"></i>
+        </h1>
+      </div>
+      <h3 *ngIf="order && !order.products.length" class="display-2 text-center mt-5">No Products in this order</h3>
+      <div *ngIf="order && order.products.length">
+        <p>This order contaions {{ order.products.length }} products.</p>
+        <p>The total price of this order is: {{ order.totalPrice/100 }}</p>
+        <hr>
+        <div *ngFor="let product of order.products" class="col-md-3 mb-5">
+          <a routerLink="/product/{{ product._id }}">
+            <div class="card bg-light">
+              <img src="{{ product.image }}" alt="product" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{ product.price | currency }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section>
+  
+  <ng-template #t let-fill="fill">
+    <span *ngIf="fill === 100" class="star full">&#9733;</span>
+    <span *ngIf="fill === 0" class="star">&#9733;</span>
+    <span *ngIf="fill < 100 && fill > 0" class="star">
+      <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+    </span>
+  </ng-template>
+  
