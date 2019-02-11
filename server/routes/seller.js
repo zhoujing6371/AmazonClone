@@ -5,8 +5,8 @@ const aws = require('aws-sdk'); // communicating with our service
 const multer = require('multer');// library to upload images
 const multerS3 = require('multer-s3');// library to upload images directly to the amazon s3
 
-//AKIAI3GVZEKDUT5DU2DQ    Xpbna2k6dr+htqBGX4dsFrIcJc9rf7HsD01S0t/v
-const s3 = new aws.S3({ accessKeyId: "AKIAI3GVZEKDUT5DU2DQ", secretAccessKey: "Xpbna2k6dr+htqBGX4dsFrIcJc9rf7HsD01S0t/v" });
+//change the key to your own aws s3 key
+const s3 = new aws.S3({ accessKeyId: "AKIAI366ZEKDUT5DU2DQ", secretAccessKey: "Xpb552k6dr+htqBGX4dsFrIcJc9rf7HsD01S0t/v" });
 
 const faker = require('faker');
 

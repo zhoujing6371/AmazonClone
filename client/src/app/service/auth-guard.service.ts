@@ -16,7 +16,7 @@ export class AuthGuardService implements CanActivate {
       return state.url.startsWith('/profile')
         ? true
         : (this.router.navigate(['/']), false);
-    } else {// if not logged in, block access to routes the staff profile and allow access to the register page.
+    } else {// if not logged in, block access to routes the user profile and allow access to the register page.
       return state.url.startsWith('/profile')
         ? (this.router.navigate(['/']), false)
         : true;
