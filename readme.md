@@ -1,8 +1,8 @@
 # Amazon Clone full stack ecommerce website
 # Write By Jing Zhou
-##Amazon Clone full stack ecommerce  website based on Angular 7.0 + Express + MongoDB
+## Amazon Clone full stack ecommerce  website based on Angular 7.0 + Express + MongoDB
 
-###To run the client side, get into the server directory, type in:  nodemon server
+### To run the client side, get into the server directory, type in:  nodemon server
 
 1, used bootstrap for style.<br>
 2, used used stripe for payments.<br>
@@ -13,7 +13,7 @@
 
 
 
-###To run the server side, type in:  ng serve
+### To run the server side, type in:  ng serve
 
 1, used algolia for search.<br>
 2, used aws to store seller information and product information.<br>
